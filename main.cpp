@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 #include <sstream>
 #include <fstream>
 #include <string>
@@ -9,6 +9,7 @@ int main(){
 	ofstream fstrm3("E:\\abc.txt");//创建一个文件流，和文件绑定，确定是写，此时如果不存在abc.txt就会自动创建这个文件
 	fstream fstrm4("E:\\abc.txt",fstream::out);//创建一个文件流，和文件绑定，确定是写，此时如果不存在abc.txt就会自动创建这个文件
 	                                        //fstream::out 是模式，不说明模式的采用默认模式
+	
 	//模式
 	//in/out/app/ate/trunc/binary-----------------fstream::in/ifstream::in/ofstream::in...
 	//app默认out，out默认trunc，除非显式说明app，就不会默认trunc了
@@ -21,11 +22,11 @@ int main(){
 	   fstream fstrm1("E:\\abc,txt");  open函数被自动调用
 	*/
 
-	string s="Hello";
+	/*string s="Hello";
 	stringstream strm1;//创建一个未绑定的stringstream对象
 	stringstream strm2(s);//创建一个stringstream对象，和s的一个拷贝绑定
 	strm1.str(s);//strm1和s的一个拷贝绑定
-	strm1.str();//返回和strm1绑定的字符串
+	strm1.str();//返回和strm1绑定的字符串*/
 	/*stringstream strm1;
 	   strm1.str(s);
 	   等价于
@@ -58,4 +59,23 @@ int main(){
 		badnums<<' '<<nums;
 	}
 	cout<<badnums.str();
+}
+*/
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+int main(){
+	string str= "my";
+	vector<string> v (1,str);
+	v.push_back("mmm");
+	v.push_back("www");
+	vector<string> vec;
+	vec.push_back("hello");
+	vec.push_back("sss");
+	vector<string>::iterator p=v.begin()+1;
+	string str1=*p;
+	vector<string>::iterator b=vec.begin();
+	vector<string>::iterator e=vec.end();
+	v.insert(p,b,e);
 }
