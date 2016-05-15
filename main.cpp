@@ -61,21 +61,45 @@ int main(){
 	cout<<badnums.str();
 }
 */
+//#include <iostream>
+//#include <vector>
+//#include <string>
+//using namespace std;
+//int main(){
+//	string str= "my";
+//	vector<string> v (1,str);
+//	v.push_back("mmm");
+//	v.push_back("www");
+//	vector<string> vec;
+//	vec.push_back("hello");
+//	vec.push_back("sss");
+//	vector<string>::iterator p=v.begin()+1;
+//	string str1=*p;
+//	vector<string>::iterator b=vec.begin();
+//	vector<string>::iterator e=vec.end();
+//	vector<string>::iterator m=v.insert(p,b,e);
+//}
+
+
+//Ë³ÐòÈÝÆ÷µÄ²Ù×÷
 #include <iostream>
+#include <forward_list>
 #include <vector>
-#include <string>
 using namespace std;
 int main(){
-	string str= "my";
-	vector<string> v (1,str);
-	v.push_back("mmm");
-	v.push_back("www");
-	vector<string> vec;
-	vec.push_back("hello");
-	vec.push_back("sss");
-	vector<string>::iterator p=v.begin()+1;
-	string str1=*p;
-	vector<string>::iterator b=vec.begin();
-	vector<string>::iterator e=vec.end();
-	v.insert(p,b,e);
+	vector<int> ivec;
+	vector<int> ivec2;
+	ivec2.push_back(2);
+	ivec2.push_back(3);
+	forward_list<int> flst;
+	ivec.push_back(8);
+	vector<int>::iterator p=ivec.begin();
+	vector<int>::iterator b=ivec2.begin();
+	vector<int>::iterator e=ivec2.end();
+	//ivec.insert(p,5,8);
+	ivec.insert(p,b,e);
+	p=ivec.begin();
+	e=ivec.end();
+	ivec.erase(p,e);
+	flst.push_front(6);
 }
