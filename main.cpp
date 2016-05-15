@@ -102,4 +102,5 @@ int main(){
 	e=ivec.end();
 	ivec.erase(p,e);
 	flst.push_front(6);
+	flst.erase_after(flst.begin(),flst.end());
 }
